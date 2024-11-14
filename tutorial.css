@@ -1,0 +1,45 @@
+
+.player{
+    width: 80px; /* original width of the player : 72 px */
+    height: 100px; /* Original height of the player: 84 px */
+    background-image: url("player_back.png");
+    background-size: 240px 90px; /* width of the sprite sheet: 240px */
+    background-position: -80px 0; /* position of the player: -80px */
+    position: fixed;
+    z-index: 999;
+}
+
+/* Trigger the walk animation */
+.player.active{
+    animation: 0.6s walk linear infinite;
+}
+
+@keyframes walk{
+    0%,32%{
+        background-position: 0 0;
+    }
+    33%, 65%{
+        background-position: -80px 0;
+    }
+    66%, 100%{
+        background-position: -160px 0;
+    }
+}
+
+
+.bush {
+    width: 40px;
+    height: 30px;
+    background-image: url("bush.png");
+    background-size: 100% 100%;
+    position: fixed;
+    z-index: -100;
+}
+
+.pokeball{
+    width: 30px;
+    height: 30px;
+    background-image: url("pokeball.png");
+    background-size: 100% 100%;
+    position: fixed;
+}
